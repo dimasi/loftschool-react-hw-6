@@ -1,21 +1,36 @@
-.order {
-  margin: 5px 0;
-  padding: 10px;
-  background-color: #d1d1ff;
-  border-radius: 3px;
-}
-
-.order__upper {
+.Order {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
+  position: relative;
+  background-color: #efefef;
+  font-size: 14px;
 }
 
-.order__lower {
-
+.Order + .Order {
+  margin-top: 11px;
 }
 
-.p--order {
-  padding: 0;
-  margin: 0;
+.Order + .Order::before {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  border-top: 1px dashed #ccc;
+}
+
+.Order__field_price {
+  margin-left: auto;
+}
+
+.Order__field_date {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.Order__field-title {
+  margin-right: 5px;
+  font-weight: 600;
 }

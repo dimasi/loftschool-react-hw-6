@@ -1,7 +1,26 @@
-.budget {
-  border-radius: 4px;
-  background-color: #eee;
-  padding: 10px 20px;
-  margin: 0 10px;
-  width: 300px;
+.Budget {
+  flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 10px 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+}
+
+.Budget__row {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% + 20px);
+  padding: 5px 10px;
+  margin: 0 0 0 -10px;
+  font-size: 14px;
+  cursor: default;
+}
+
+.Budget__row:nth-child(even) {
+  background-color: #efefef;
+}
+
+.Budget__row_text-bold {
+  font-weight: 600;
 }
