@@ -9,10 +9,10 @@ class App extends PureComponent {
     return (
       <div className="App">
         <div className="App__wrapper">
-          <Market></Market>
-          <Farm></Farm>
+          <Market />
+          <Farm />
         </div>
-        <Budget></Budget>
+        <Budget />
       </div>
     );
   }

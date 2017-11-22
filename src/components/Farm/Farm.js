@@ -13,9 +13,10 @@ class Farm extends PureComponent {
     moveOrderToCustomer(orderToMove);
   }
 
+  moveHarvestToMarketDisabled = () => !this.props.orders.length;
+
   render() {
     const {orders} = this.props;
-    const moveHarvestToMarketDisabled = !orders.length;
 
     return (
       <section className="Farm">
@@ -25,7 +26,7 @@ class Farm extends PureComponent {
             type="button" 
             className="App__button"
             onClick={this.handlerClickMoveHarvestToMarket}
-            disabled={moveHarvestToMarketDisabled}
+            disabled={this.moveHarvestToMarketDisabled()}
           >
             Отправить урожай клиенту
           </button>
